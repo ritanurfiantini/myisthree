@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Daftar B2B - myisthree</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-background"></div>
+        
+        <div class="login-wrapper">
+            <div class="login-box">
+                <div class="login-header">
+                    <div class="logo-mini">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h1>Portal B2B myisthree</h1>
+                    <p>Kemitraan Bisnis untuk Pertumbuhan Bersama</p>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="tab-navigation">
+                    <button class="tab-btn active" data-tab="login">Login</button>
+                    <button class="tab-btn" data-tab="register">Daftar</button>
+                </div>
+
+                <!-- Login Tab -->
+                <form class="login-form tab-content active" id="b2bLoginForm" data-tab="login">
+                    <div class="form-group">
+                        <label for="login-email">Email Perusahaan</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="login-email" name="email" placeholder="Masukkan email perusahaan" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="login-password" name="password" placeholder="Masukkan password" required>
+                            <i class="fas fa-eye toggle-password" onclick="togglePassword('login-password')"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember">
+                            <span>Ingat saya</span>
+                        </label>
+                        <a href="#" class="forgot-password">Lupa password?</a>
+                    </div>
+
+                    <button type="submit" class="login-btn">Masuk</button>
+                </form>
+
+                <!-- Register Tab -->
+                <form class="login-form tab-content" id="b2bRegisterForm" data-tab="register">
+                    <div class="form-group">
+                        <label for="company-name">Nama Perusahaan / Organisasi</label>
+                        <div class="input-group">
+                            <i class="fas fa-building"></i>
+                            <input type="text" id="company-name" name="company_name" placeholder="Masukkan nama perusahaan" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company-type">Tipe Mitra</label>
+                        <div class="input-group">
+                            <select id="company-type" name="company_type" required>
+                                <option value="">Pilih tipe mitra</option>
+                                <option value="koperasi">Koperasi</option>
+                                <option value="bumdes">BumDes (Badan Usaha Milik Desa)</option>
+                                <option value="ukm">UKM (Usaha Kecil Menengah)</option>
+                                <option value="ikm">IKM (Industri Kecil Menengah)</option>
+                                <option value="buyer">Buyer / Pembeli Korporat</option>
+                                <option value="supplier">Supplier</option>
+                                <option value="other">Lainnya</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register-email">Email Perusahaan</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="register-email" name="email" placeholder="Masukkan email perusahaan" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Nomor Telepon</label>
+                        <div class="input-group">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pic-name">Nama PIC (Person In Charge)</label>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="pic-name" name="pic_name" placeholder="Nama kontak utama" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="register-password" name="password" placeholder="Buat password yang kuat" required>
+                            <i class="fas fa-eye toggle-password" onclick="togglePassword('register-password')"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="terms" required>
+                            <span>Saya setuju dengan Syarat & Ketentuan</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="login-btn">Daftar Sekarang</button>
+                </form>
+
+                <div class="login-footer">
+                    <a href="../index.html" class="back-link">Kembali ke Beranda</a>
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <div class="info-content">
+                    <h2>Bergabunglah dengan Ekosistem B2B</h2>
+                    <p>Platform terintegrasi untuk pertumbuhan bisnis bersama</p>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Upload Produk Real-time</li>
+                        <li><i class="fas fa-check"></i> Dashboard Penjualan Terintegrasi</li>
+                        <li><i class="fas fa-check"></i> Sistem Pembayaran Aman</li>
+                        <li><i class="fas fa-check"></i> Logistik Transparan</li>
+                        <li><i class="fas fa-check"></i> Dukungan 24/7</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>
